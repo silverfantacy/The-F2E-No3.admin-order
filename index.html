@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="stylesheets/all.css"/>
+    <script>FontAwesomeConfig = { searchPseudoElements: true };</script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body class="bg-light">
+    <div id="app"> 
+      <header class="bg-dark text-white">
+        <div class="container d-flex">
+          <div class="logo">Shoptime</div>
+          <div class="menu"><a class="active" href="index.html">HOME</a><a href="index.html">ORDERS</a><a href="index.html">PRODUCT</a></div>
+          <div class="admin ml-auto">ADMIN</div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="d-flex align-items-end">
+            <div class="info font-weight-bold text-dark">OVERVIEW</div>
+            <div class="ml-auto d-flex">
+              <div class="dates"><span>2018/6/6</span><i class="fa fa-caret-right"></i><span>2018/6/13</span></div>
+              <div class="unit"><span>Weekly</span><i class="fa fa-caret-down"></i></div>
+            </div>
+          </div>
+          <div class="n3 d-flex justify-content-between">
+            <div class="d-flex flex-column"> 
+              <div class="d-flex justify-content-center align-items-center text-dark font-weight-bold"><i class="fa fa-hand-holding-usd"></i><span>TOTAL REVENUE</span></div>
+              <div class="d-flex justify-content-center align-items-start">
+                <div class="h2 text-success">54,540</div>
+              </div>
+            </div>
+            <div class="d-flex flex-column"> 
+              <div class="d-flex justify-content-center align-items-center text-dark font-weight-bold"><i class="fa fa-boxes"></i><span>TOTAL COST</span></div>
+              <div class="d-flex justify-content-center align-items-start">
+                <div class="h2 text-danger">12,660</div>
+              </div>
+            </div>
+            <div class="d-flex flex-column"> 
+              <div class="d-flex justify-content-center align-items-center text-dark font-weight-bold"><i class="fa fa-money-bill"></i><span>NET INCOME</span></div>
+              <div class="d-flex justify-content-center align-items-start">
+                <div class="h2 text-primary">41,880</div>
+              </div>
+            </div>
+          </div>
+          <div class="n1">
+            <div class="info font-weight-bold text-dark">Activity</div>
+            <div id="chart"></div>
+          </div>
+          <div class="n2 d-flex justify-content-between">
+            <div class="left-side">
+              <div class="info font-weight-bold text-dark">Transaction Website</div>
+              <ul>
+                <li class="item"><i class="item-icon fab fa-facebook"></i>
+                  <spna class="item-name">Facebook.com</spna><span class="item-num">45,836</span>
+                  <div class="item-rate item-rate-up"><i class="fas fa-arrow-up"></i>20%</div>
+                </li>
+                <li class="item"><i class="item-icon fab fa-google"></i>
+                  <spna class="item-name">google.com</spna><span class="item-num">23,582</span>
+                  <div class="item-rate item-rate-up"><i class="fas fa-arrow-up"></i>12%</div>
+                </li>
+                <li class="item"><i class="item-icon fas fa-shopping-cart"></i>
+                  <spna class="item-name">Shopify.com</spna><span class="item-num">2,489</span>
+                  <div class="item-rate item-rate-down"><i class="fas fa-arrow-down"></i>15%</div>
+                </li>
+                <li class="item"><i class="item-icon fab fa-wordpress"></i>
+                  <spna class="item-name">Wordpress.com</spna><span class="item-num">1,057</span>
+                  <div class="item-rate item-rate-down"><i class="fas fa-arrow-down"></i>30%</div>
+                </li>
+              </ul>
+            </div>
+            <div class="right-side">
+              <div class="info font-weight-bold text-dark">Latest Orders</div>
+              <ul>
+                <li class="item w-100">
+                  <div class="item-img" style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=8743c5a475485bea1912f528a753ac9a&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80);"></div>
+                  <div class="item-right">
+                    <div class="info font-weight-bold text-dark">Vintage T-shirt</div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-clock"></i><span class="item-time mr-auto">2018/6/13  13:42</span><span class="font-weight-bold text-dark">Total</span></div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-male" style="margin: 0 9px 0 6px;"></i><span class="item-time mr-auto">Belle Willis</span><span class="info font-weight-bold text-dark">3,200</span></div>
+                  </div>
+                </li>
+                <li class="item w-100">
+                  <div class="item-img" style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=8743c5a475485bea1912f528a753ac9a&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80);"></div>
+                  <div class="item-right">
+                    <div class="info font-weight-bold text-dark">Cowboy Jacket</div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-clock"></i><span class="item-time mr-auto">2018/6/13  13:42</span><span class="font-weight-bold text-dark">Total</span></div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-male" style="margin: 0 9px 0 6px;"></i><span class="item-time mr-auto">Adrian Cummings</span><span class="info font-weight-bold text-dark">2,800</span></div>
+                  </div>
+                </li>
+                <li class="item w-100">
+                  <div class="item-img" style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=8743c5a475485bea1912f528a753ac9a&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80);"></div>
+                  <div class="item-right">
+                    <div class="info font-weight-bold text-dark">Coach Coat</div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-clock"></i><span class="item-time mr-auto">2018/6/13  13:42</span><span class="font-weight-bold text-dark">Total</span></div>
+                    <div class="d-flex justify-content-between align-items-center"><i class="fas fa-male" style="margin: 0 9px 0 6px;"></i><span class="item-time mr-auto">Lura Holland</span><span class="info font-weight-bold text-dark">1,600</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascripts/vendor.js"></script>
+  </body>
+</html>
