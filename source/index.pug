@@ -10,8 +10,134 @@ html(lang="en")
     link(rel="stylesheet", href="stylesheets/all.css")
     script.
       FontAwesomeConfig = { searchPseudoElements: true };
-  body
+    script(src="https://www.gstatic.com/charts/loader.js")
+  body.bg-light
     #app 
+      header.bg-dark.text-white
+        .container.d-flex
+          .logo Shoptime
+          .menu
+            a(href="index.html").active HOME
+            a(href="index.html") ORDERS
+            a(href="index.html") PRODUCT
+          .admin.ml-auto ADMIN
+      main
+        .container
+
+          //- 表示區
+          .d-flex.align-items-end
+            div.info.font-weight-bold.text-dark OVERVIEW
+            .ml-auto.d-flex
+              .dates
+                span 2018/6/6
+                i.fa.fa-caret-right
+                span 2018/6/13
+              .unit
+                span Weekly
+                i.fa.fa-caret-down
+
+          //- 區塊3
+          .n3.d-flex.justify-content-between
+            div.d-flex.flex-column 
+              div.d-flex.justify-content-center.align-items-center.text-dark.font-weight-bold
+                i.fa.fa-hand-holding-usd
+                span TOTAL REVENUE
+              div.d-flex.justify-content-center.align-items-start
+                .h2.text-success 54,540
+            div.d-flex.flex-column 
+              div.d-flex.justify-content-center.align-items-center.text-dark.font-weight-bold
+                i.fa.fa-boxes
+                span TOTAL COST
+              div.d-flex.justify-content-center.align-items-start
+                .h2.text-danger 12,660
+            div.d-flex.flex-column 
+              div.d-flex.justify-content-center.align-items-center.text-dark.font-weight-bold
+                i.fa.fa-money-bill
+                span NET INCOME
+              div.d-flex.justify-content-center.align-items-start
+                .h2.text-primary 41,880
+
+          //- 區塊1
+          .n1
+            div.info.font-weight-bold.text-dark Activity
+            #chart
+
+          //- 區塊2
+          .n2.d-flex.justify-content-between
+
+            //- 左邊
+            div.left-side
+              div.info.font-weight-bold.text-dark Transaction Website
+              ul
+                li.item
+                  i.item-icon.fab.fa-facebook
+                  spna.item-name Facebook.com
+                  span.item-num 45,836
+                  div.item-rate.item-rate-up
+                    i.fas.fa-arrow-up
+                    | 20%
+                li.item
+                  i.item-icon.fab.fa-google
+                  spna.item-name google.com
+                  span.item-num 23,582
+                  div.item-rate.item-rate-up
+                    i.fas.fa-arrow-up
+                    | 12%
+                li.item
+                  i.item-icon.fas.fa-shopping-cart
+                  spna.item-name Shopify.com
+                  span.item-num 2,489
+                  div.item-rate.item-rate-down
+                    i.fas.fa-arrow-down
+                    | 15%
+                li.item
+                  i.item-icon.fab.fa-wordpress
+                  spna.item-name Wordpress.com
+                  span.item-num 1,057
+                  div.item-rate.item-rate-down
+                    i.fas.fa-arrow-down
+                    | 30%
+
+            //- 右邊
+            div.right-side
+              div.info.font-weight-bold.text-dark Latest Orders
+              ul
+                li.item.w-100
+                  .item-img(style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8743c5a475485bea1912f528a753ac9a&auto=format&fit=crop&w=1350&q=80);")
+                  div.item-right
+                    div.info.font-weight-bold.text-dark Vintage T-shirt
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-clock
+                      span.item-time.mr-auto 2018/6/13  13:42
+                      span.font-weight-bold.text-dark Total
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-male(style="margin: 0 9px 0 6px;")
+                      span.item-time.mr-auto Belle Willis
+                      span.info.font-weight-bold.text-dark 3,200
+                li.item.w-100
+                  .item-img(style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8743c5a475485bea1912f528a753ac9a&auto=format&fit=crop&w=1350&q=80);")
+                  div.item-right
+                    div.info.font-weight-bold.text-dark Cowboy Jacket
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-clock
+                      span.item-time.mr-auto 2018/6/13  13:42
+                      span.font-weight-bold.text-dark Total
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-male(style="margin: 0 9px 0 6px;")
+                      span.item-time.mr-auto Adrian Cummings
+                      span.info.font-weight-bold.text-dark 2,800
+                li.item.w-100
+                  .item-img(style="background-image: url(https://images.unsplash.com/photo-1519027356316-9f99e11d8bac?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8743c5a475485bea1912f528a753ac9a&auto=format&fit=crop&w=1350&q=80);")
+                  div.item-right
+                    div.info.font-weight-bold.text-dark Coach Coat
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-clock
+                      span.item-time.mr-auto 2018/6/13  13:42
+                      span.font-weight-bold.text-dark Total
+                    div.d-flex.justify-content-between.align-items-center
+                      i.fas.fa-male(style="margin: 0 9px 0 6px;")
+                      span.item-time.mr-auto Lura Holland
+                      span.info.font-weight-bold.text-dark 1,600
       
     script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
     script(src="https://unpkg.com/axios/dist/axios.min.js")

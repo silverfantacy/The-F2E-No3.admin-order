@@ -10,6 +10,7 @@
 
 // stylelint-disable
 $white:    #fff !default;
+$gray:     #F2F2F2 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -19,10 +20,6 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$gray-1:   #F2F2F2 !default;
-$gray-2:   #EBEBEB !default;
-$gray-3:   #D7D7D7 !default;
-$gray-4:   #9B9B9B !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -41,8 +38,6 @@ $grays: map-merge((
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$purple-l:#9013FE !default;
-$purple-d:#7828B4 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
@@ -56,8 +51,6 @@ $colors: map-merge((
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
-  "purple-l":   $purple-l,
-  "purple-d":   $purple-d,
   "pink":       $pink,
   "red":        $red,
   "orange":     $orange,
@@ -66,22 +59,19 @@ $colors: map-merge((
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
-  // "gray":       $gray-600,
-  // "gray-dark":  $gray-800,
-  "gray-1":     $gray-1,
-  "gray-2":     $gray-2,
-  "gray-3":     $gray-3,
-  "gray-4":     $gray-4
+  "gray":       $gray,
+  "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $purple-d !default;
-$secondary:     $purple-l !default;
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-3 !default;
+$light:         $gray !default;
 $dark:          $black !default;
+// $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -181,8 +171,8 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
-  xl: 1200px
+  lg: 992px
+  // xl: 1200px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -196,8 +186,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px
+  lg: 970px
+  // xl: 1140px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -243,7 +233,7 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      "Roboto", -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
